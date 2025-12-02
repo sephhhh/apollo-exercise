@@ -13,7 +13,6 @@
 
 - Java 21
 - Spring Boot 4
-- Spring Data JPA + Hibernate
 - PostgreSQL
 - Maven
 - JUnit 5 + Spring Test + MockMvc
@@ -27,13 +26,18 @@
 ## How to Run Everything from the Terminal
 
 ```bash
-# 1. Start the backend (from project root folder)
+# 1. Create/Start the Database
+cd backend
+docker compose up vehicles-db
+
+# 2. In a new terminal tab - start the backend from project backend folder
+cd backend
 ./mvnw spring-boot:run
 # → API runs on http://localhost:8080
 
-# 2. In a new terminal tab – start the frontend
+# 3. In a new terminal tab – start the frontend from the frontend folder
 cd frontend
-npm install          # first time only
+npm install
 ng serve
 # → Frontend runs on http://localhost:4200
 ```
@@ -42,6 +46,7 @@ ng serve
 
 ```bash
 # Run all backend tests
+cd backend
 ./mvnw test
 
 # Expected result:
