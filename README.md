@@ -26,9 +26,9 @@
 ## How to Run Everything from the Terminal
 
 ```bash
-# 1. Create/Start the Database (make sure Docker is running first)
+# 1. Build and start all services using Docker
 cd backend
-docker compose up vehicles-db
+docker compose up --build
 
 # 2. In a new terminal tab - start the backend from project backend folder
 cd backend
@@ -38,6 +38,7 @@ cd backend
 # 3. In a new terminal tab – start the frontend from the frontend folder
 cd frontend
 npm install
+npm install -g @angular/cli   #if angular not installed
 ng serve
 # → Frontend runs on http://localhost:4200
 ```
