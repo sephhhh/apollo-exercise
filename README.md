@@ -26,7 +26,7 @@
 ## How to Run Everything from the Terminal
 
 ```bash
-# 1. Create/Start the Database
+# 1. Create/Start the Database (make sure Docker is running first)
 cd backend
 docker compose up vehicles-db
 
