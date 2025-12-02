@@ -1,0 +1,66 @@
+<p>Vehicle Info</p>
+
+<br>
+
+<form #vehicleForm="ngForm" (ngSubmit)="onSubmit(vehicleForm)">
+    <label for="">
+        Manufacturer Name: 
+        <input type="text" [(ngModel)]="manufacturerName" name="manufacturerName" required [readonly]="isReadOnly">
+    </label>
+    <br>
+
+    <br>
+    <label for="">
+        Description: 
+        <textarea [(ngModel)]="description" name="description" required [readonly]="isReadOnly"></textarea>
+    </label>
+    <br>
+
+    <br>
+    <label for="">
+        Horse Power: 
+        <input [(ngModel)]="horsePower" type="number" name="horsePower" required [readonly]="isReadOnly">
+    </label>
+    <br>
+
+    <br>
+    <label for="">
+        Model Name: 
+        <input type="text" [(ngModel)]="modelName" name="modelName" required [readonly]="isReadOnly">
+    </label>
+
+    <br>
+    <label for="">
+        Model Year: 
+        <input [(ngModel)]="modelYear" type="number" name="modelYear" required [readonly]="isReadOnly">
+    </label>
+
+    <br>
+    <label for="">
+        Purchase Price: 
+        <input [(ngModel)]="price" type="number" name="price" required [readonly]="isReadOnly">
+    </label>
+
+    <br>
+    <label for="">
+        Fuel Type: 
+        <input type="text" [(ngModel)]="fuelType" name="fuelType" required [readonly]="isReadOnly">
+    </label>
+
+    <br>
+    <label for="">
+        VIN: 
+        <input type="text" [(ngModel)]="vinNumber" name="vinNumber" required [readonly]="isReadOnly">
+    </label>
+    <br>
+
+    <button type="submit" *ngIf="isReadOnly">Edit Vehicle Details</button>
+    <button type="submit" (click)="deleteVehicle()" *ngIf="isReadOnly">Delete Vehicle</button>
+    <button type="button" (click)="saveVehicleInfo()" *ngIf="!isReadOnly">Save Changes</button>
+</form>
+
+
+
+
+<br>
+<button routerLink="/view-all-vehicles">Back</button>

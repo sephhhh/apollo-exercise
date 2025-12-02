@@ -1,0 +1,62 @@
+<p>Add Vehicle</p>
+
+<form (ngSubmit)="addVehicle()">
+    <label for="">
+        Manufacturer Name: 
+        <input type="text" [(ngModel)]="manufacturerName" name="manufacturerName" required>
+    </label>
+    <br>
+
+    <br>
+    <label for="">
+        Description: 
+        <textarea [(ngModel)]="description" name="description" required></textarea>
+    </label>
+    <br>
+
+    <br>
+    <label for="">
+        Horse Power: 
+        <input [(ngModel)]="horsePower" type="number" name="horsePower" required>
+    </label>
+    <br>
+
+    <br>
+    <label for="">
+        Model Name: 
+        <input type="text" [(ngModel)]="modelName" name="modelName" required>
+    </label>
+
+    <br>
+    <label for="">
+        Model Year: 
+        <input [(ngModel)]="modelYear" type="number" name="modelYear" required>
+    </label>
+
+    <br>
+    <label for="">
+        Purchase Price: 
+        <input [(ngModel)]="purchasePrice" type="text" inputmode="decimal" name="purchasePrice" required>
+    </label>
+
+    <br>
+    <label for="">
+        Fuel Type: 
+        <input type="text" [(ngModel)]="fuelType" name="fuelType" required>
+    </label>
+
+    <br>
+    <label for="">
+        VIN: 
+        <input type="text" [(ngModel)]="vin" name="vin" required>
+    </label>
+    <br>
+
+    <br>
+    <button type="submit">Add Vehicle</button>
+</form>
+<br>
+
+
+<br>
+<button routerLink="/">Back</button>
